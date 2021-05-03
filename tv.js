@@ -1,12 +1,16 @@
 const addPoster = (data) => {
     console.log(data)
+    for (let i = 0; i < 10; i++) {
+        const poster = document.createElement('img')
 
-    const poster = document.createElement('img')
-    poster.src = data[0].show.image.medium
-    console.log(poster)
-    document.body.appendChild(poster)
+        if (data[i].show.image != null) {
+
+            poster.src = data[i].show.image.medium
+            console.log(poster)
+            document.body.appendChild(poster)
+        }
+    }
 }
-
 
 function doSearch(event) {
     event.preventDefault()
