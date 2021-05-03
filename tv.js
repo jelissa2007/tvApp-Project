@@ -23,10 +23,12 @@ function doSearch(event) {
         .then(reply => addPoster(reply))
 
 }
+
 // adding streaming url in linked image 
 document.getElementById('netflix').addEventListener('click', function (e) {
     window.open('http://www.netflix.com', '_blank');
 });
+
 
 
 
