@@ -12,16 +12,7 @@
 <body>
 
   <body>
-    <h2>TV Search</h2>
-    <form onsubmit="doSearch(event)">
-      <label for="name">TV Show</label><br>
-      <input name="tvChoice" type="text" id="" text="" value=""><br>
-
-      <button type="submit" value="Submit"> Submit </button>
-      <button onclick="location.reload()" reset value="New Search">Clear</button>
-
-    </form>
-    <br><br><br>
+    
     <hr>
     <h2>Sign Up </h2>
     <form id="sign-up">
@@ -72,6 +63,24 @@
 
     </form>
     <br>
+    <br>
+    <br>
+
+    <h2>TV Search</h2>
+    <form onsubmit="doSearch(event)">
+      <label for="name">TV Show</label><br>
+      <input name="tvChoice" type="text" id="" text="" value=""><br>
+
+      <button type="submit" value="Submit"> Submit </button>
+      <button onclick="location.reload()" reset value="New Search">Clear</button>
+
+
+      <h3 id="title"></h3>
+      <h5 id= "genres"></h5>
+      <p id= "summary"></p>
+      <h5 id= "streamingPlatform"></h5>
+    
+    </form>
     <script src="tv.js"></script>
   </body>
 
