@@ -3,3 +3,18 @@ img {
     height: 200px;
 }
 
+.bttn {
+    
+        position: absolute;
+        text-align:center;
+       
+        background-color: #555;
+        color: white;
+        font-size: 16px;
+        padding: 4px 4px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      
+}
+
