@@ -1,20 +1,115 @@
-img {
-    width: 200px;
-    height: 200px;
+html,
+body {
+  /* margin: 50px 0; */
+  text-align:center;
+  padding: 0;
+  font-size: 10px;
+  font-family: Arial, sans-serif;
 }
 
-.bttn {
-    
-        position: absolute;
-        text-align:center;
-       
-        background-color: #555;
-        color: white;
-        font-size: 16px;
-        padding: 4px 4px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-      
+.cell {
+  display: inline-block;
+  text-align:left;
+  width: 50%;
+  height: 550px;
+  margin: 10px;
 }
 
+.wrapper {
+  height: 550px;
+  width: 100%;
+  border-radius:3px;
+  overflow:hidden;
+  position: relative;
+  background: #ddd;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px -4px;
+}
+
+.wrapper:after {
+  content: '';
+  display: block;
+  padding-bottom: 50%;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: bottom center;
+  overflow: hidden;
+  display: inline-block;
+  height: 550px;
+  width: 100%;
+}
+
+.content .detail {
+  color: #fff;
+  background: inherit;
+  position: absolute;
+  bottom: 1px;
+  height:0;
+  left:1px;
+  right:3px;
+  border-radius:3px;
+  z-index: 10;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.content .detail:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: inherit;
+  left: 0;
+  right:0;
+  bottom:0;
+  box-sizing: border-box;
+  z-index: -1;
+  top:0;
+  overflow: hidden;
+  filter: blur(5px);
+  transform:scale(2);
+  width: 100%;
+  height: 100%;
+}
+
+.content .detail:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+  height: 100%;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+}
+
+.content:hover .detail {
+  height: 100%;
+  width:100%;
+}
+
+.content .detail h2,
+.content .detail p {
+  padding: 0;
+  margin: 0px 10px;
+}
+
+.content .detail h2 {
+  margin: 10px 10px 5px 10px;
+  font-size: 2.6em;
+  font-weight: normal
+}
+
+.content .detail {
+  float: right;
+  margin-right: 10px;
+  margin-top: 15px;
+  font-size: 1.5em;
+}
